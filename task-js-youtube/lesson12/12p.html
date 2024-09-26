@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>Document</title>
+  </head>
   <body>
+    <button class="js-button" onclick="clickButton();">start</button>
     <script>
-      function searchWord(words) {
-        let index = -1;
-        for (let i = 0; i < words.length; i++) {
-          if (words[i] === "search") {
-            index = i;
-            break;
-          }
-        }
-        return index;
+      function clickButton() {
+        const button = document.querySelector(".js-button");
+        setTimeout(() => {
+          button.innerHTML = "finished";
+        }, 1);
       }
-      console.log(searchWord(["hello", "world", "search", "good","search"]));
-      console.log(searchWord(['not', 'found']));
+
+      add();
+      add();
     </script>
   </body>
 </html>

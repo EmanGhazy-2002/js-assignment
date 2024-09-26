@@ -3,20 +3,10 @@
   <head></head>
   <body>
     <script>
-      function countWord(words) {
-        const result = {};
-
-        for (let i = 0; i < words.length; i++) {
-          if (!result[words[i]]) {
-            result[words[i]] = 1;
-          }
-          else{
-            result[words[i]]++;
-          }
-        }
-        return result;
+      function removeEgg(foods) {
+        return foods.filter((food) => food !== "egg");
       }
-      console.log(countWord(["eman", "aya", "eman", "eman"]));
+      console.log(removeEgg(["egg", "bacon", "sausage", "egg"]));
     </script>
   </body>
 </html>

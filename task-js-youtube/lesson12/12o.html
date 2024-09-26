@@ -3,17 +3,17 @@
   <head></head>
   <body>
     <script>
-      function searchWord(words) {
-        let index = -1;
-        for (let i = 0; i < words.length; i++) {
-          if (words[i] === "search") {
-            index = i;
-            return index;
+      function removeEgg(foods) {
+        let count = 0;
+        return foods.filter((food) => {
+          if (food !== "egg" && count < 2) {
+            count++;
+            return false;
           }
-        }
-        return index;
+          return true;
+        });
       }
-      console.log(searchWord(["hello", "world", "search", "good"]));
+      console.log(removeEgg(["egg", "bacon", "sausage", "egg"]));
     </script>
   </body>
 </html>

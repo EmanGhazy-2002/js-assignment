@@ -3,23 +3,18 @@
   <head></head>
   <body>
     <script>
-      function minMax(nums) {
-        const result = {
-         min:nums[0],
-         max:nums[0]
-        };
-
-        for (let i = 0; i < nums.length; i++) {
-          if (nums[i] > result.max) {
-            result.max = nums[i];
+      function countpositive(nums) {
+        let count = 0;
+        nums.forEach((nums) => {
+          if (nums > 0) {
+            count++;
           }
-          else if (nums[i] < result.min) {
-            result.min = nums[i];
-          }
-        }
-        return result;
+        });
+        return count;
       }
-      console.log(minMax([1,2,3]));
+
+      console.log(countpositive([1, -1, -2]));
+      console.log(countpositive([3, 4, 5, -8]));
     </script>
   </body>
 </html>

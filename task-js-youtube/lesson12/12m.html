@@ -3,38 +3,12 @@
   <head></head>
   <body>
     <script>
-      function minMax(nums) {
-        const result = {
-          min: nums[0],
-          max: nums[0],
-        };
+      const addNum = (arr, nums) => {
+        return map((value) => value + nums);
+      };
 
-        for (let i = 0; i < nums.length; i++) {
-          /* if (result.min===null ||nums[i] > result.max) {
-            result.max = nums[i];
-          }
-          else if (result.max===null ||nums[i] < result.min) {
-            result.min = nums[i];
-          }
-        */
-          if (nums[i] > result.max) {
-            result.max = nums[i];
-          } else if (nums[i] < result.min) {
-            result.min = nums[i];
-          } else if (nums.length === 1) {
-            result.min = nums[0];
-            result.max = nums[0];
-          } else if (nums.length === 0 || nums.length === null) {
-            result.min = null;
-            result.max = null;
-          }
-        }
-        return result;
-      }
-      console.log(minMax([1, 2, 3]));
-      console.log(minMax([3, 2, 6]));
-      console.log(minMax([3]));
-      console.log(minMax([]));
+      console.log(addNum([1, -1, -2], 4));
+      console.log(addNum([3, 4, 5, -8], 5));
     </script>
   </body>
 </html>

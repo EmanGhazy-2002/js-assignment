@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>Document</title>
+  </head>
   <body>
+    <button class="js-button">start</button>
     <script>
-      function searchWord(arr,word) {
-        let index = -1;
-        for (let i = 0; i < arr.length; i++) {
-          if (arr[i] === word) {
-            index = i;
-            break;
-          }
-        }
-        return index;
-      }
-      console.log(searchWord(["hello", "world", "search", "good","search"],'world'));
-      console.log(searchWord(['not', 'found'],'red'));
+
+      document.querySelector(".js-button").addEventListener('click',()=>{
+        const button = document.querySelector(".js-button");
+      setTimeout(() => {
+        button.innerHTML = "finished";
+      }, 1);
+      });
     </script>
   </body>
 </html>

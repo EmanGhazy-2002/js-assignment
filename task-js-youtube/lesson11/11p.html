@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function searchWord(words) {
+        let index = -1;
+        for (let i = 0; i < words.length; i++) {
+          if (words[i] === "search") {
+            index = i;
+            break;
+          }
+        }
+        return index;
+      }
+      console.log(searchWord(["hello", "world", "search", "good","search"]));
+      console.log(searchWord(['not', 'found']));
+    </script>
+  </body>
+</html>

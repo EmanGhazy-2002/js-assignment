@@ -1,0 +1,1 @@
+alert(`the cost :$${(599+295)/100} \n thank u, come again`);

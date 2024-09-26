@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  
+  <script>
+
+
+    function compareProduct(product1, product2) {
+        if(product1.name===product2.name&&product1.price===product2.price){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+
+   const product1 = {
+     name:'basketball',
+     price:2095
+    };
+    const product2 = {
+     name:'football',
+     price:1500
+    };
+    const product3 = {
+     name:'football',
+     price:1500
+    };
+
+
+    console.log(compareProduct(product1, product2));
+    console.log(compareProduct(product2, product3));
+  </script>
+</body>
+</html>

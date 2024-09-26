@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function searchWord(arr) {
+        const words = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === 'egg') {
+            continue;
+          }
+           words.push(arr[i]);
+        }
+        return words;
+      }
+      console.log(searchWord(["egg", "apple", "ham", "egg"]));
+    </script>
+  </body>
+</html>

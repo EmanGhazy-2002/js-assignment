@@ -1,0 +1,19 @@
+<script>
+  const add = function () {
+    console.log(2 + 3);
+  };
+
+  add();
+  add();
+
+  function runTwise(fun) {
+    fun();
+    fun();
+  }
+
+  runTwise(function () {
+    console.log("12b");
+  });
+  
+  runTwise(add);
+</script>

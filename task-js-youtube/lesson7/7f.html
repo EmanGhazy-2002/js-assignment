@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function convertToFahrenheit(celsius) {
+          return (celsius * 9 / 5) + 32;
+          }
+
+          function convertToCelsius(fahrenheit) {
+          return (fahrenheit - 32) * 5 / 9;
+          }
+
+        function convertTemp(degre, units) {
+           if(units==='f') {
+              return convertToFahrenheit(degre);
+
+           }else if(units==='c'){
+           return convertToCelsius(degre);}
+        }
+        convertTemp(25,'f');
+        convertTemp(86,'c');
+    </script>
+  </body>
+</html>

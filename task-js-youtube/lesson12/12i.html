@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button
+      onclick="timer++;
+        displayNotification();
+    ">add</button>
+    <button
+      onclick="
+      if(timer >0){
+      timer --;}
+      else if (timer===0){
+      stopNotification();}
+    ">remove</button>
+    <script>
+      let timer = 2;
+      let intervalId;
+      let isDisplay;
+       
+      displayNotification();
+      function displayNotification(){
+          if(isdisplay){
+            return;
+          }
+          isDisplay=true;
+
+          intervalId = setInterval(function () {
+            if (document.title === "document") {
+              document.title = `${timer} new messsage`;
+            }else {
+              document.title = "document";
+            }
+          }, 1000);
+      }
+
+      function stopNotification(){
+        isDisplay=false;
+
+        clearInterval(intervalId);
+        document.title = "document";
+      }
+    </script>
+  </body>
+</html>

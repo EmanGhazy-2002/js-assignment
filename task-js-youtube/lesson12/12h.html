@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="timer++;">add</button>
+    <button onclick="timer--;">remove</button>
+    <script>
+      let timer = 2;
+      setInterval(function () {
+        if (document.title === "document") {
+          document.title = `${timer} new messsage`;
+        } else {
+          document.title = "document";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
